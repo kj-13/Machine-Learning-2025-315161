@@ -9,9 +9,8 @@
 - Elvin Magaia (315431)
 - Gabija Baltrunaite (314771)
 
-## Introduction
-
 ## EDA
+
 Innitionally, we opened up the the data. Then transformed the sql files into csv files for ease of use. Then cleaned up the csv files by removing rows with null or erroneous data like out of range values(eg. ratings above 5 or below 0). After cleaning the data, we chose the information that we found to be more valuable, and plotted a variety of graphs exploring various interactions between the data.
 
 ## Models 
