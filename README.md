@@ -24,7 +24,7 @@ Validation data(20% of the total dataset) : to tune the dataset before the final
 Test data(20% of the total dataset):to report the final output in a unbiased form
 
 
-We also standerdized all variables so it affects the regression evenly. The linear regression is trained,validated and retrained before being tested in the test data , and then tested on mean square error-mse() , root mean square error-rmse() , mean absolute error-mae() and r square-r^2() .The actual vs predicted test ratings graph was then plotted tp provide a visual representation .
+We also standerdized all variables so it affects the regression evenly. The linear regression is trained,validated and retrained before being tested in the test data , and then tested on mean square error-mse, root mean square error-rmse, mean absolute error-mae and r square-r^2 .The actual vs predicted test ratings graph was then plotted tp provide a visual representation .
 
 
 Next we prep the data for the next two clustering models ,using five user activity features (total ratings,avrage ratings,rating standrad deviation,number of uniques movies watched and activity days) users are categorized.After standardization of the data , the optimal number of clusters to be used in the model is calculated using both the Elbow method (inertia) and Silhouette score .
