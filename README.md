@@ -9,6 +9,10 @@
 - Elvin Magaia (315431)
 - Gabija Baltrunaite (314771)
 
+## Introduction
+
+This project analyzes how users interact with content on a large streaming platform. By looking at data like ratings, timestamps, and viewing habits, the goal is to understand how people watch different genres, how their preferences change over time, and how users group together based on similar behavior. Machine learning techniques like clustering and linear regression are used to find patterns in the data. These insights will help improve content recommendations, audience targeting, and overall platform engagement.
+
 ## EDA
 
 Innitionally, we opened up the the data. Then transformed the sql files into csv files for ease of use. Then cleaned up the csv files by removing rows with null or erroneous data like out of range values(eg. ratings above 5 or below 0). After cleaning the data, we chose the information that we found to be more valuable, and plotted a variety of graphs exploring various interactions between the data.
