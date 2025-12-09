@@ -72,20 +72,22 @@ Silhouette score and Davies-Bouldin score was checked in the model to see Hierar
 
 ## Results
 
-This part evaluates the effectiveness of different clustering approaches in identifying meaningful viewer behaviour patterns. The analysis begins by constructing a standardised feature matrix from user statistics, incorporating key behavioural indicators such as total ratings, average rating, variability, number of unique movies watched and overall activity span. These metrics provide a consistent foundation for comparing clustering models.
+In Part 3, the goal was to evaluate and compare the three models used in the project: Linear Regression, KMeans clustering, and Hierarchical clustering. Each experiment focuses on a different aspect of model performance and provides insights into how well the models work for predicting movie ratings and grouping users based on their behavior.
 
 
-A baseline comparison is then performed by contrasting real clustering outputs with randomly asigned labels. Methods such as KMeans, Agglomerative Clustering(Ward linkage) and DBSCAN are applied and evaluated using the silhouette score, which quantifies how well-separated and internally coherent the resulting groups are. This confirms whether genuine structure exists in the data and which models capture it most effectively.
-Dimensionality reduction is examined by applying KMeans both to the full feature space and to a two-dimensional PCA projection. This reveals how much behavioural information is preserved in lower dimensions  and whether PCA enhances or weakens the separation between user groups. The PCA scatter plot provides an interpretable visual representation of these patterns.
-Finally, the analysis incorporates temporal dynamics by grouping viewers into early and late cohorts basedon their first recorded rating. The distribution of cluster memberships across these cohorts is compared to determine whether behavioural profiles change over time. Annual activity trends are also visualized to show how viewer engagement evolves throughout the dataset.
+The first experiment compares the existing Linear Regression model with a very simple baseline model that always predicts the average training rating. By looking at metrics such as MSE, RMSE, MAE, and R², we can see whether the regression model actually learns useful relationships from the data or if it performs no better than a constant prediction. This comparison helps determine the real value of the Linear Regression model in predicting movie ratings.
 
 
-Finally a dendogramis plotted using the wards method to help see optimal number of clusters and also help with cluster analysis, this was done with a sample of data (300 sample size)to visualize it efficently
+The second experiment compares the two clustering models used in the project: KMeans and Hierarchical clustering. Both models create five clusters, but they differ in how they form them and in the amount of data they use. To compare their performance, we calculate the Silhouette Score and Davies–Bouldin Index for each model. These metrics show how compact and well-separated the clusters are. The results help assess which clustering method produces clearer and more meaningful user segments.
+
+
+The third experiment looks at how interpretable and practically useful the clusters are. For both KMeans and Hierarchical clustering, we compare the size of each cluster and compute the average values of key user-behavior features, such as the number of ratings, average rating, consistency of ratings, number of unique movies watched, and engagement levels. By examining these profiles, we can understand what types of viewer groups each model creates and how distinct those groups are. This helps determine which clustering method provides more informative and actionable insights about user behaviour.
 
 
 ## Visualization
 
 This part finilizes the project by interpreting the behavioural meaning of the viewer clusters and checking whether the segmentation is affected by temporal or ating related biases. It summarizes each cluster using key behavioural metrices such as total ratings, avarage rating, rating variability and the number of unique movies watched, allowing clear identification of distincs user groups. It then evaluates fairness by examining whether clusters differ systematically in the year users first rated a movie, and wether activity or rating patterns create distortions in the grouping. Finally, it exports an enriched dataset containing all user features and cluster labels, fulfilling the project requirement to validate, interpret and prepare the clustering results for reporting. 
+
 
 ## Conclusion
 
